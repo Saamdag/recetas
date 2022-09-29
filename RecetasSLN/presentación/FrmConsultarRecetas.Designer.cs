@@ -100,7 +100,12 @@ namespace RecetasSLN.presentación
             // 
             // cboTipoReceta
             // 
+            this.cboTipoReceta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoReceta.FormattingEnabled = true;
+            this.cboTipoReceta.Items.AddRange(new object[] {
+            "Rapida",
+            "Dieta",
+            "Chatarra"});
             this.cboTipoReceta.Location = new System.Drawing.Point(104, 24);
             this.cboTipoReceta.Name = "cboTipoReceta";
             this.cboTipoReceta.Size = new System.Drawing.Size(176, 21);

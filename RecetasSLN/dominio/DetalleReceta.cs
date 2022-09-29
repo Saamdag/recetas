@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecetasSLN.dominio
 {
-    internal class DetalleReceta
+     class DetalleReceta
     {
         public Ingrediente ingrediente { get; set; }
         public decimal cantidad { get; set; }

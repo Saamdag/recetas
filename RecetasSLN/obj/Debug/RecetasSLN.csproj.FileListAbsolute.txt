@@ -42,3 +42,15 @@ C:\Users\samir\Desktop\Alta_recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.Gener
 C:\Users\samir\Desktop\Alta_recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.CoreCompileInputs.cache
 C:\Users\samir\Desktop\Alta_recetas\RecetasSLN\obj\Debug\RecetasSLN.exe
 C:\Users\samir\Desktop\Alta_recetas\RecetasSLN\obj\Debug\RecetasSLN.pdb
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\bin\Debug\RecetasSLN.exe.config
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\bin\Debug\RecetasSLN.exe
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\bin\Debug\RecetasSLN.pdb
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.AssemblyReference.cache
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.SuggestedBindingRedirects.cache
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.presentación.FrmConsultarRecetas.resources
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.presentación.FrmNuevaReceta.resources
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.Properties.Resources.resources
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.GenerateResource.cache
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.csproj.CoreCompileInputs.cache
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.exe
+C:\Users\Samdag\Source\Repos\Saamdag\recetas\RecetasSLN\obj\Debug\RecetasSLN.pdb

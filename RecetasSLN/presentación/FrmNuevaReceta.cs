@@ -9,17 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RecetasSLN.datos;
 using RecetasSLN.dominio;
+using RecetasSLN.Servicios;
 
 namespace RecetasSLN.presentación
 {
     public partial class FrmNuevaReceta : Form
     {
-        private static helperDb helperDb;
-
+        //private static helperDb helperDb;
+        private IServicio Servicio;
         private Receta nuevaReceta;
         public FrmNuevaReceta()
         {
             InitializeComponent();
+            Servicio = new Servicio();
             nuevaReceta = new Receta();
         }
 
@@ -36,9 +38,9 @@ namespace RecetasSLN.presentación
 
         public void cargarCombo()
         {
-            cboIngredientes.DataSource = helperDb.obtenerInstancia().listarProductos();
-            cboIngredientes.DisplayMember = "n_ingrediente";
-            cboIngredientes.ValueMember = "id_ingrediente";
+            cboIngredientes.DataSource = Servicio.obtenerIngredientes();
+            cboIngredientes.DisplayMember = "nombre";
+            cboIngredientes.ValueMember = "idIngrediente";
             cboIngredientes.SelectedIndex = -1;
         }
 
@@ -59,20 +61,15 @@ namespace RecetasSLN.presentación
                 }
             }
 
-            DataRowView ingrediente = (DataRowView)cboIngredientes.SelectedItem;
-            int id = Convert.ToInt32(ingrediente.Row.ItemArray[0]);
-            string nombre = (string)(ingrediente.Row.ItemArray[1]);
-            string unidadMedida = (string)(ingrediente.Row.ItemArray[2]);
-
-            Ingrediente ingrediente1 = new Ingrediente(id, nombre, unidadMedida);
+            Ingrediente ingrediente = (Ingrediente)cboIngredientes.SelectedItem;
 
             decimal cantidad = (decimal)txtCant.Value;
 
-            DetalleReceta detalle = new DetalleReceta(ingrediente1, cantidad);
+            DetalleReceta detalle = new DetalleReceta(ingrediente, cantidad);
 
             nuevaReceta.agregarDetalle(detalle);
 
-            dataGridView1.Rows.Add(new object[] { id, nombre, unidadMedida, (string)cantidad.ToString() });
+            dataGridView1.Rows.Add(new object[] { ingrediente.idIngrediente,ingrediente.nombre,ingrediente.unidad,cantidad.ToString() });
 
             refreshCantidadIng();
             txtCant.Value = 1;
@@ -125,7 +122,7 @@ namespace RecetasSLN.presentación
             }
             nuevaReceta.nombre = txtNombre.Text;
             nuevaReceta.cheff = txtCheff.Text;
-            nuevaReceta.tipoReceta = Convert.ToInt32(cboTipoReceta.SelectedValue);
+            nuevaReceta.tipoReceta = Convert.ToInt32(cboTipoReceta.SelectedIndex);
 
             guardarReceta(nuevaReceta);
 
@@ -134,7 +131,8 @@ namespace RecetasSLN.presentación
 
         private void guardarReceta(Receta oReceta)
         {
-            if (helperDb.obtenerInstancia().confirmarReceta(oReceta))
+             //Servicio.confirmarReceta(oReceta);
+            if (Servicio.confirmarReceta(oReceta))
             {
                 MessageBox.Show("Receta registrada", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();

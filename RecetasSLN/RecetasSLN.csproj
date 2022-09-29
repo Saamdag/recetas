@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="datos\DAO.cs" />
     <Compile Include="datos\helperDb.cs" />
     <Compile Include="datos\Implementacion\RecetaDao.cs" />
     <Compile Include="datos\Interface\IReceta.cs" />
@@ -67,6 +66,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\IServicio.cs" />
+    <Compile Include="Servicios\Servicio.cs" />
     <EmbeddedResource Include="presentación\FrmConsultarRecetas.resx">
       <DependentUpon>FrmConsultarRecetas.cs</DependentUpon>
     </EmbeddedResource>

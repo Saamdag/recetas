@@ -61,7 +61,7 @@ namespace RecetasSLN.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Data Source=DESKTOP-UKHHIVP\SQLEXPRESS;Initial Catalog=recetas_db;Integrated Security=True.
+        ///   Busca una cadena traducida similar a Data Source=DESKTOP-AF67D5U\SQLEXPRESS;Initial Catalog=recetasApp;Integrated Security=True.
         /// </summary>
         internal static string cnnString {
             get {
